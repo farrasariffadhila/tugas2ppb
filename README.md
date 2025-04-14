@@ -2,7 +2,7 @@
 
 5025221301 - Muhammad Farras Arif Fadhila
 
-📱 Flutter + ObjectBox CRUD 
+Flutter + ObjectBox CRUD <br>
 Proyek ini adalah aplikasi CRUD (Create, Read, Update, Delete) sederhana menggunakan Flutter dan ObjectBox sebagai local database. Aplikasi ini memungkinkan pengguna menambahkan, membaca, memperbarui, dan menghapus data Person yang disimpan secara lokal di perangkat.
 
 ## 1. person.dart – Membuat Entity ObjectBox
@@ -88,6 +88,14 @@ void _refreshData() {
 Penjelasan:
 - Memperbarui tampilan berdasarkan data terkini dari database.
 
+#### -> Fungsi Delete 
+```
+int id = int.tryParse(inputController.text) ?? 0;
+personBox.remove(id);
+```
+Penjelasan: 
+- Menghapus data berdasarkan ID yang diketik user.
+
 #### -> Fungsi Delete All
 ```
 Future<void> deleteAll() async {
@@ -122,7 +130,7 @@ Penjelasan:
 
 - people → list yang ditampilkan di UI.
 
-#### - Menampilkan daftar data 
+#### -> Menampilkan daftar data 
 ```
 ListView.builder(
   shrinkWrap: true,
@@ -139,15 +147,34 @@ Penjelasan:
 - Menggunakan ListTile untuk tampilan baris per baris.
 
 ## 🔄 Siklus Aplikasi CRUD
-User masukkan nama → klik Create
+- User masukkan nama → klik Create
 
-Data disimpan ke ObjectBox → ditampilkan langsung ke UI
+- Data disimpan ke ObjectBox → ditampilkan langsung ke UI
 
-User ingin ubah → masukkan format id-nama → klik Update
+- User ingin ubah → masukkan format id-nama → klik Update
 
-Hapus data tertentu → ketik id → klik Delete
+- Hapus data tertentu → ketik id → klik Delete
 
-Hapus semua dan reset → klik 🗑️ Delete All
+- Hapus semua dan reset → klik 🗑️ Delete All
+
+## SIMULASI APLIKASI
+
+### Create 
+<img width="249" alt="image" src="https://github.com/user-attachments/assets/76f1bf67-8ddb-4539-95fc-4849d86f8886" />
+
+## Update
+<img width="245" alt="image" src="https://github.com/user-attachments/assets/1800b504-7940-42f0-b09f-708c719efade" />
+
+## Delete 
+<img width="248" alt="image" src="https://github.com/user-attachments/assets/b743233b-20f1-4a44-a90c-517375558bc0" /><br>
+- List ke 1 berhasil terhapus
+
+## Delete All
+<img width="246" alt="image" src="https://github.com/user-attachments/assets/36bb2c8f-99a5-41b6-a70b-0cc09c3f4417" /><br>
+- Semua data berhasil dihapus dan apabila dibuat data baru akan mengulangi id dari 1 <br>
+
+<img width="242" alt="image" src="https://github.com/user-attachments/assets/13810ced-477b-462a-b81f-cf85adf167c4" />
+
 
 
 
