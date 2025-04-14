@@ -1,4 +1,4 @@
-# tugas2ppb
+# TUGAS 2 PPB
 
 5025221301 - Muhammad Farras Arif Fadhila
 
